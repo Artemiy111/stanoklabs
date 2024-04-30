@@ -1,7 +1,3 @@
-# My Nuxt Starter
+# СтанокLabs
 
-- shadcn-vue
-- tailwindcss
-- eslint
-- image
-- google-fonts
+Платформа для покупки готовых лабораторных работ по программированию университета МГТУ Станкин
