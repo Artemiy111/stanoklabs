@@ -9,9 +9,13 @@ export default defineNuxtConfig({
     '@nuxt/image',
     'shadcn-nuxt',
   ],
+  googleFonts: {
+    families: {
+      Montserrat: true,
+    },
+  },
   shadcn: {
     prefix: '',
-
     componentDir: './components/ui',
   },
   eslint: {

@@ -1,7 +1,30 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+body {
+  @apply text-base
+}
+
+@screen sm {
+  body {
+    @apply text-sm
+  }
+}
+
+.container {
+  @apply px-8
  
+}
+
+@screen md {
+  .container {
+    @apply px-4
+  }
+} 
+
+
+
 @layer base {
   :root {
     --background: 0 0% 100%;

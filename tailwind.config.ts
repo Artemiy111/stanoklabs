@@ -1,20 +1,47 @@
 import animate from 'tailwindcss-animate'
+import type { Config } from 'tailwindcss'
+import defaultTheme from 'tailwindcss/defaultTheme'
 
-/** @type {import('tailwindcss').Config} */
-module.exports = {
+export const screens = {
+  '2xl': { max: '1399px' },
+  'xl': { max: '1279px' },
+  'lg': { max: '1023px' },
+  'md': { max: '767px' },
+  'sm': { max: '639px' },
+  'xs': { max: '479px' },
+} as const
+
+export type ScreenSize = keyof (typeof screens)
+
+export default <Config>{
+  content: [],
   darkMode: ['class'],
   safelist: ['dark'],
   prefix: '',
 
   theme: {
+    screens: screens,
     container: {
       center: true,
-      padding: '2rem',
       screens: {
         '2xl': '1400px',
+        'DEFAULT': '100%',
       },
     },
+    fontSize: {
+      'xs': '14px',
+      'sm': '16px',
+      'base': '20px',
+      'lg': '24px',
+      'xl': '28px',
+      '2xl': '32px',
+      '3xl': '36px',
+      '4xl': '40px',
+    },
     extend: {
+      fontFamily: {
+        sans: ['Montserrat', ...defaultTheme.fontFamily.sans],
+      },
       colors: {
         border: 'hsl(var(--border))',
         input: 'hsl(var(--input))',
@@ -58,20 +85,20 @@ module.exports = {
       },
       keyframes: {
         'accordion-down': {
-          from: { height: 0 },
+          from: { height: '0' },
           to: { height: 'var(--radix-accordion-content-height)' },
         },
         'accordion-up': {
           from: { height: 'var(--radix-accordion-content-height)' },
-          to: { height: 0 },
+          to: { height: '0 ' },
         },
         'collapsible-down': {
-          from: { height: 0 },
+          from: { height: '0' },
           to: { height: 'var(--radix-collapsible-content-height)' },
         },
         'collapsible-up': {
           from: { height: 'var(--radix-collapsible-content-height)' },
-          to: { height: 0 },
+          to: { height: '0' },
         },
       },
       animation: {
