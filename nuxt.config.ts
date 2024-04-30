@@ -1,4 +1,5 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
+
 export default defineNuxtConfig({
   devtools: { enabled: true },
   telemetry: { enabled: false },
@@ -8,7 +9,15 @@ export default defineNuxtConfig({
     '@nuxt/eslint',
     '@nuxt/image',
     'shadcn-nuxt',
+    'nuxt-gtag',
   ],
+  runtimeConfig: {
+    public: {
+      gtagId: 'G-XXXXXXXXXX',
+    },
+  },
+  gtag: {
+  },
   googleFonts: {
     families: {
       Montserrat: true,

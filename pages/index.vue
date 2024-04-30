@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { HeartHandshake, Clock, Award, SquareArrowUpRight } from 'lucide-vue-next'
+import { HeartHandshake, Clock, Award, SquareArrowUpRight, FlaskConical } from 'lucide-vue-next'
 import { navigationMenuTriggerStyle } from '~/components/ui/navigation-menu'
 import { cn } from '~/lib/utils'
 
@@ -354,21 +354,10 @@ const disciplinesWithAdditionalInfo = disciplines.map((d) => {
       <div
         class="flex gap-2 items-center justify-center"
       >
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          width="24"
-          height="24"
-          viewBox="0 0 24 24"
-          fill="none"
-          stroke="currentColor"
-          stroke-width="2"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          class="h-6 w-6"
-        >
-          <path d="m8 3 4 8 5-5 5 15H2L8 3z" />
-        </svg>
-        <span class="">СтанокLabs</span>
+        <FlaskConical
+          class="text-red-500"
+        />
+        <span class="">Станок<span class="text-red-500 font-bold">Labs</span> </span>
       </div>
 
       <NavigationMenu>
