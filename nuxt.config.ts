@@ -11,12 +11,23 @@ export default defineNuxtConfig({
     'shadcn-nuxt',
     'nuxt-gtag',
   ],
+  app: {
+    head: {
+      htmlAttrs: {
+        lang: 'ru',
+      },
+    },
+  },
   runtimeConfig: {
     public: {
       gtagId: 'G-XXXXXXXXXX',
     },
   },
+  image: {
+    format: ['avif', 'webp', 'png', 'jpg'],
+  },
   gtag: {
+    id: 'G-CP62J5QD7L',
   },
   googleFonts: {
     families: {
@@ -35,6 +46,7 @@ export default defineNuxtConfig({
   imports: {
     dirs: [],
   },
+
   components: {
     dirs: [],
   },
