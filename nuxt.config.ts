@@ -18,16 +18,16 @@ export default defineNuxtConfig({
       },
     },
   },
-  runtimeConfig: {
-    public: {
-      gtagId: 'G-XXXXXXXXXX',
-    },
-  },
+  // runtimeConfig: {
+  //   public: {
+  //     gtagId: 'G-XXXXXXXXXX',
+  //   },
+  // },
   image: {
     format: ['avif', 'webp', 'png', 'jpg'],
   },
   gtag: {
-    id: 'G-CP62J5QD7L',
+    id: 'CP62J5QD7L',
   },
   googleFonts: {
     families: {
