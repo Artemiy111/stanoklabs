@@ -1,16 +1,21 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 
 export default defineNuxtConfig({
-  devtools: { enabled: true },
+  devtools: { enabled: false },
   telemetry: { enabled: false },
   modules: [
     '@nuxtjs/tailwindcss',
-    '@nuxtjs/google-fonts',
     '@nuxt/eslint',
     '@nuxt/image',
     'shadcn-nuxt',
     'nuxt-gtag',
+    '@nuxt/fonts',
   ],
+  fonts: {
+    families: [
+      { name: 'Montserrat', provider: 'none' },
+    ],
+  },
   app: {
     head: {
       htmlAttrs: {
@@ -28,11 +33,6 @@ export default defineNuxtConfig({
   },
   gtag: {
     id: 'G-CP62J5QD7L',
-  },
-  googleFonts: {
-    families: {
-      Montserrat: true,
-    },
   },
   shadcn: {
     prefix: '',
