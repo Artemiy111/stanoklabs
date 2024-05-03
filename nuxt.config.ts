@@ -5,17 +5,33 @@ export default defineNuxtConfig({
   telemetry: { enabled: false },
   modules: [
     '@nuxtjs/tailwindcss',
+    '@nuxtjs/color-mode',
     '@nuxt/eslint',
     '@nuxt/image',
     'shadcn-nuxt',
     'nuxt-gtag',
     '@nuxt/fonts',
   ],
+
+  // style
   fonts: {
     families: [
       { name: 'Montserrat', provider: 'none' },
     ],
   },
+  colorMode: {
+    preference: 'system',
+    fallback: 'light',
+  },
+  image: {
+    format: ['avif', 'webp', 'png', 'jpg'],
+  },
+  shadcn: {
+    prefix: '',
+    componentDir: './components/ui',
+  },
+
+  //
   app: {
     head: {
       htmlAttrs: {
@@ -28,16 +44,11 @@ export default defineNuxtConfig({
       gtagId: 'G-XXXXXXXXXX',
     },
   },
-  image: {
-    format: ['avif', 'webp', 'png', 'jpg'],
-  },
+
   gtag: {
     id: 'G-CP62J5QD7L',
   },
-  shadcn: {
-    prefix: '',
-    componentDir: './components/ui',
-  },
+
   eslint: {
     config: {
       stylistic: true,
